@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                border: 2px solid blue;
+                padding: 20px;
+                margin: 10px;
+                background-color: brown;
+            }
+            h1{
+                text-align: center;
+            }
+            a,input,button{
+                border:1px solid black;
+                background-color: aliceblue;
+                padding:20px;
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Delete employee details</h1>
+       <form method="post">
+        {% csrf_token %}
+        {{form1}}
+        <br>
+        <input type="submit" value="Delete employee">
+        <button type="reset" value="Reset">Reset</button>
+       </form>
+       <a href="http://127.0.0.1:8000/employee">Home</a>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            head{
+                border: 2px solid black;
+                padding:20px;
+                margin:20px;
+                background-color: aqua;
+            }
+            h{
+                text-align: center;
+            }
+            th,td{
+                border:1px solid black;
+                text-align: left;
+                padding:5px;
+                border-collapse: collapse;
+            }
+            a{
+                border: 1px solid black;
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Employee detaiks</h1>
+        <table>
+            <tr>
+                <th>empnum</th>
+                <th>empname</th>
+                <th>empsalary</th>
+                <th>empAddress</th>
+            </tr>
+            {% for data in context %}
+            <tr>
+                <td>{{data.empnum}}</td>
+                <td>{{data.empname}}</td>
+                <td>{{data.empsalary}}</td>
+                <td>{{data.empAddress}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="http://127.0.0.1:8000/employee/insert">Add the employee information</a>
+        <a href="http://127.0.0.1:8000/employee">Go to home page</a>
+    </body>
+</html>
