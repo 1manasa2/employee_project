@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                border: 2px solid black;
+                padding: 20px;
+                margin: 20px;
+                background-color: aqua;
+            }
+            h1{
+                text-align: center;
+            }
+            a,input,button{
+                border: 2px solid black;
+                padding: 20px;
+                margin: 20px;
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <br>
+            <input type="submit" value="Add blog">
+            <button type="reset" value="Reset">Reset</button>
+        </form>
+        <a href=" http://127.0.0.1:8000/writinblog">Home</a>
+    </body>
+</html>

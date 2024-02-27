@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            head{
+                border: 2px solid black;
+                padding:20px;
+                margin:20px;
+                background-color: aqua;
+            }
+            h{
+                text-align: center;
+            }
+            th,td{
+                border:1px solid black;
+                text-align: left;
+                padding:5px;
+            }
+            a{
+                border: 1px solid black;
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Blog details</h1>
+        <table>
+            <tr>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+            {% for data in BlogPost %}
+            <tr>
+                <td>{{data.title}}</td>
+                <td>{{data.body}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/writinblogs/createblog">Add a new blog</a>
+        <a href="/writinblogs">Go to home page</a>
+    </body>
+    </html>
