@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            head{
+                border: 2px solid black;
+                padding:20px;
+                margin:20px;
+                background-color: aqua;
+            }
+            h{
+                text-align: center;
+            }
+            th,td{
+                border:1px solid black;
+                text-align: left;
+                padding:5px;
+            }
+            a{
+                border: 1px solid black;
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Room details</h1>
+        <table>
+            <tr>
+                <th>Roomtype</th>
+                <th>Availablecount</th>
+                <th>Rpu</th>
+            </tr>
+            {% for data in context %}
+            <tr>
+                <td>{{data.Roomtype}}</td>
+                <td>{{data.Availablecount}}</td>
+                <td>{{data.Rpu}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="http://127.0.0.1:8000/Roombook/addRooms">Add the Rooms information</a>
+        <a href="http://127.0.0.1:8000/Roombook">Go to home page</a>
+    </body>
+</html>
