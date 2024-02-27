@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets Booking Page</title>
+    <style>
+        body{
+            text-align: center;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+        }
+        a,button,input{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book your tickets here</h1>
+    <form method="post">
+       {% csrf_token %}
+       {{form.as_p}}
+       <br>
+       <input type="submit" value="Book tickets">
+       <button type="reset" value="Reset">Reset</button>
+    </form>
+    <br>
+    <a href="http://127.0.0.1:8000/Travels">Homepage</a>
+</body>
+</html>
