@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            head{
+                border: 2px solid black;
+                padding:20px;
+                margin:20px;
+                background-color: aqua;
+            }
+            h{
+                text-align: center;
+            }
+            th,td{
+                border:1px solid black;
+                text-align: left;
+                padding:5px;
+            }
+            a{
+                border: 1px solid black;
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grocery Details</h1>
+        <table>
+            <tr>
+                <th>name</th>
+                <th>type</th>
+                <th>qty</th>
+                <th>Rpu</th>
+                <th>amount</th>
+            </tr>
+            {% for data in context %}
+            <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.type}}</td>
+                <td>{{data.qty}}</td>
+                <td>{{data.Rpu}}</td>
+                <td>{{data.amount}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="http://127.0.0.1:8000/Grocerystore/additem">Add the details of grocery item</a>
+        <br>
+        <br>
+        <a href="http://127.0.0.1:8000/Grocerystore">Go to home page</a>
+        <br>
+    </body>
+</html>
